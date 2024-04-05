@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    const pair = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === pair) return true;
+    }
+  }
+
+  return false;
 }
 
 /* 
@@ -8,6 +16,7 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  iterate through the array to find a pair that compliments tha target
 */
 
 /*
